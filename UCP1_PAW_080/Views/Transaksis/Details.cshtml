@@ -1,0 +1,42 @@
+﻿@model UCP1_PAW_080.Models.Transaksi
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Transaksi</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdBarang)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdBarang)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tanggal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tanggal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdCustomerNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdCustomerNavigation.IdCustomer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdTransaksiNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTransaksiNavigation.IdBarang)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdTransaksi">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
